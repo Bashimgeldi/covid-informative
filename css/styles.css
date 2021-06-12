@@ -12,6 +12,7 @@
 
 body {
   background: linear-gradient(180deg, rgba(255, 141, 155, 0.1) 0%, white 10%);
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -237,7 +238,7 @@ body {
   color: #4B4F51;
 }
 
-.contagion .card {
+#contagion .card {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   margin-bottom: 30px;
@@ -249,19 +250,19 @@ body {
   border-bottom: 6px solid #FA5652;
   border: none;
 }
-.contagion .card:hover {
+#contagion .card:hover {
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
   border-bottom: 6px solid #FA5652;
 }
-.contagion .card__figure {
+#contagion .card__figure {
   margin: auto;
   display: block;
   width: 250px;
 }
-.contagion .card__image {
+#contagion .card__image {
   width: 220px;
 }
-.contagion .card__title {
+#contagion .card__title {
   margin-top: 30px;
   font-weight: bold;
   font-size: 20px;
@@ -273,7 +274,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.contagion .card__desc {
+#contagion .card__desc {
   margin-top: 13px;
   font-size: 16px;
   line-height: 25px;
