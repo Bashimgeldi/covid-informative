@@ -11,6 +11,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const openMenu = document.getElementById("open-menu");
+const navLinks = document.getElementById("nav-links");
+
+openMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("nav-open");
+});
+
 function loader() {
   let body = document.querySelector("body");
 

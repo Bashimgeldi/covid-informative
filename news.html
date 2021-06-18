@@ -139,7 +139,9 @@
 
             })
             .catch((err) => {
+                let news = document.querySelector(".news-page");
                 console.error(err);
+                news.innerHTML += "<h1 class='text-center'>API Request error😪 <br> Please, Try again later!</h1>";
             });
             function loading() {
                 let body = document.querySelector("body");
