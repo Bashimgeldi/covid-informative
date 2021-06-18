@@ -71,10 +71,11 @@
                         </figure>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6">
-                        <a href="#" class="footer__link">Overview</a>
-                        <a href="#" class="footer__link">Symptomps</a>
-                        <a href="#" class="footer__link">Prevention</a>
-                        <a href="#" class="footer__link">Treatment</a>
+                        <a href="index.html" class="footer__link">Statistics</a>
+                        <a href="overview.html" class="footer__link">Overview</a>
+                        <a href="symptoms.html" class="footer__link">Symptoms</a>
+                        <a href="prevention.html" class="footer__link">Prevention</a>
+                        <a href="news.html" class="footer__link">News</a>
                     </div>
                     <div class="col-lg-3">
                         <p>Source from <a
@@ -143,11 +144,12 @@
                 console.error(err);
                 news.innerHTML += "<h1 class='text-center'>API Request error😪 <br> Please, Try again later!</h1>";
             });
-            function loading() {
-                let body = document.querySelector("body");
 
-                body.classList.remove("loading");
-            }
+        function loading() {
+            let body = document.querySelector("body");
+
+            body.classList.remove("loading");
+        }
     </script>
 </body>
 
