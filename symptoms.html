@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Covid tracker
+    </title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Red+Hat+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="loading" onload="loader()">
+    <div class="loader">
+        <i class="bx bxs-virus bx-spin"></i>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-frame">
+
+                <figure class="pageLogo">
+                    <img src="images/page-logo.svg" class="pageLogo__image" alt="LOGO">
+                </figure>
+                <div class="open-menu" id="open-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="nav-link">Statistics</a>
+                    <a href="overview.html" class="nav-link">Overview</a>
+                    <a href="symptoms.html" class="nav-link active">Symptoms</a>
+                    <a href="prevention.html" class="nav-link">Prevention</a>
+                    <a href="news.html" class="nav-link">News</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="symptomps">
+            <div class="container">
+                <div class="upside top">
+                    <h2 class="upside__title">Covid-19</h2>
+                    <span class="upside__span">Symptoms</span>
+                    <p class="upside__desc">
+                        We can slow or even prevent the transmission of Covid-19 using the following steps:
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-12">
+                        <figure class="symptomps__figure">
+                            <img src="images/symptomps.svg" class="symptomps__image" alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row text-left mt-5 mb-4 row-list">
+                    <h4 class="mb-4">Some other Covid symptoms to look out for:</h4>
+                    <ul class="mb-4">
+                        <li class="mb-3">
+                            Most common symptoms
+                            <ul class="mt-3">
+                                <li>dry cough</li>
+                                <li>tiredness</li>
+                            </ul>
+                        </li>
+                        <li class="mb-3">
+                            Less common symtoms
+                            <ul class="mt-3">
+                                <li>aches and pains</li>
+                                <li>diarrhea</li>
+                                <li>conjunctivitis</li>
+                                <li>loss of taste or smell</li>
+                                <li>a rash on skin, or discoloration of fingers or toes</li>
+                            </ul>
+                        </li>
+                        <li class="mb-3">Serious symptoms
+                            <ul class="mt-3">
+                                <li>difficulty breathing or shortness of breath</li>
+                                <li>chest pain or pressure</li>
+                                <li>loss of speech or movement</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h4 class="mb-4">It is important to note that some individuals are more at risk of developing more
+                        life-threatening symptoms. </h4>
+                    <p class="mb-3">They may fall under one or more of the following categories:</p>
+                    <ul>
+                        <li>Aged over 60 and above</li>
+                        <li>High blood pressure</li>
+                        <li>Heart problems/disease</li>
+                        <li>Lung problems/disease</li>
+                        <li>Diabetes</li>
+                        <li>Cancer</li>
+                        <li>Obesity</li>
+                        <li>Asthma</li>
+                    </ul>
+                    <p>Incase any serious symptoms develop seek medical attention. It is always recommended to contact
+                        the health facility before hand and inform them before a visit so that they may prepare or
+                        redirect you to the right healthcare facility.</p>
+                    <p>Individuals with mild symptoms should stay home and quarantine. Keep tracking the severity of the
+                        symptoms and inform local medical personnel through the means made possible by local government
+                        programs.</p>
+                    <p>It takes an average of <strong>5-6 days</strong> for infected individuals to show any symptoms if
+                        they have been infected by the virus, however it can take up to <strong>14 days</strong> in some
+                        individuals. Some may be infected and may not exhibit symptoms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <figure class="logo-figure">
+                            <img src="images/page-logo.svg" class="footer__logo" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <a href="index.html" class="footer__link">Statistics</a>
+                        <a href="overview.html" class="footer__link">Overview</a>
+                        <a href="symptoms.html" class="footer__link">Symptoms</a>
+                        <a href="prevention.html" class="footer__link">Prevention</a>
+                        <a href="news.html" class="footer__link">News</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Source from <a
+                                href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683"
+                                target="_blank">api.covid19api.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/functions.js"></script>
+    <script>
+        (function (w, d, u) {
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.com/b17929189/crm/site_button/loader_2_plnihy.js');
+    </script>
+</body>
+
+</html>

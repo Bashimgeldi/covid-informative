@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Covid tracker
+    </title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Red+Hat+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="loading" onload="loader()">
+    <div class="loader">
+        <i class="bx bxs-virus bx-spin"></i>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-frame">
+
+                <figure class="pageLogo">
+                    <img src="images/page-logo.svg" class="pageLogo__image" alt="LOGO">
+                </figure>
+                <div class="open-menu" id="open-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="nav-link">Statistics</a>
+                    <a href="overview.html" class="nav-link active">Overview</a>
+                    <a href="symptoms.html" class="nav-link">Symptoms</a>
+                    <a href="prevention.html" class="nav-link">Prevention</a>
+                    <a href="news.html" class="nav-link">News</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!--COVİD-19 Alert-->
+        <section class="section hero" id="overview">
+            <div class="container">
+                <div class="row direction">
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <h2 class="section__title">COVID-19 Alert</h2>
+                        <span class="section__span">Stay at Home quarantine To stop Corona virus</span>
+                        <p class="section__desc">There is no specific medicine to prevent or treat coronavirus disease
+                            (COVID-19). People may need supportive care to .</p>
+                        <a href="#" class="section__button seciton__button--center">Let Us Help</a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <img src="images/section-image.svg" class="section__image" alt="Quarantine">
+                        <img src="images/section-virus.svg" class="section__virus1" alt="">
+                        <img src="images/section-virus.svg" class="section__virus2" alt="">
+                        <img src="images/section-virus.svg" class="section__virus3" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--What Is Covid-19-->
+        <section class="section coronavirus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <figure class="covidImage">
+                            <img src="images/covid-image.png" class="covidImage__image" alt="Corona Virus">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 text-position">
+                        <h1 class="coronavirus__title">What Is Covid-19</h1>
+                        <span class="coronavirus__span">Coronavirus</span>
+                        <p class="coronavirus__desc">
+                            Corona viruses are a type of virus.
+                            There are many different kinds, and some cause disease.
+                            A newly identified type has caused a recent outbreak of respiratory
+                            illness now called COVID-19.Lauren Sauer, M.S., the director of operations with the
+                            Johns Hopkins Office of Critical Event Preparedness and Response
+                        </p>
+                        <a href="#" class="coronavirus__button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Contagion-->
+        <section class="section mt-5 pt-5" id="contagion">
+            <div class="container">
+                <div class="upside upside--top">
+                    <h2 class="upside__title">Covid-19</h2>
+                    <span class="upside__span">Contagion</span>
+                    <p class="upside__desc">
+                        Corona viruses are a type of virus.
+                        There are many different kinds, and some cause disease.
+                        A newly identified type
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="images/card1-image.png" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Air Transmission</h3>
+                            <p class="card__desc"> Objectively evolve tactical before extensible initiatives.
+                                Efficiently
+                                simplify</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="images/card2-image.png?raw=true" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Human Contacts</h3>
+                            <p class="card__desc">Washing your hands is one of thesimplest ways you can protect</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card">
+                            <figure class="card__figure">
+                                <img src="images/card3-image.png?raw=true" class="card__image" alt="">
+                            </figure>
+                            <h3 class="card__title">Contained Objects</h3>
+                            <p class="card__desc">Use the tissue while sneezing,In this way, you can protect your
+                                droplets.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <figure class="logo-figure">
+                            <img src="images/page-logo.svg" class="footer__logo" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <a href="index.html" class="footer__link">Statistics</a>
+                        <a href="overview.html" class="footer__link">Overview</a>
+                        <a href="symptoms.html" class="footer__link">Symptoms</a>
+                        <a href="prevention.html" class="footer__link">Prevention</a>
+                        <a href="news.html" class="footer__link">News</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Source from <a
+                                href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683"
+                                target="_blank">api.covid19api.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script>
+        (function (w, d, u) {
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.com/b17929189/crm/site_button/loader_2_plnihy.js');
+    </script>
+</body>
+
+</html>

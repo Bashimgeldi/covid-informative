@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Covid tracker
+    </title>
+    <link href='./css/styles.css' rel='preload' as="style">
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Red+Hat+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"
+        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="loading" onload="loading()">
+    <div class="loader">
+        <i class="bx bxs-virus bx-spin"></i>
+    </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-frame">
+
+                <figure class="pageLogo">
+                    <img src="images/page-logo.svg" class="pageLogo__image" alt="LOGO">
+                </figure>
+                <div class="open-menu" id="open-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="nav-link">Statistics</a>
+                    <a href="overview.html" class="nav-link">Overview</a>
+                    <a href="symptoms.html" class="nav-link">Symptoms</a>
+                    <a href="prevention.html" class="nav-link">Prevention</a>
+                    <a href="news.html" class="nav-link active">News</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+
+        <!-- Prevention -->
+        <section id="news-page">
+            <div class="container">
+                <div class="row news-page"></div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="footer mt-5">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-12 col-md-3 col-lg-3">
+                        <figure class="logo-figure">
+                            <img src="images/page-logo.svg" class="footer__logo" alt="">
+                        </figure>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <a href="index.html" class="footer__link">Statistics</a>
+                        <a href="overview.html" class="footer__link">Overview</a>
+                        <a href="symptoms.html" class="footer__link">Symptoms</a>
+                        <a href="prevention.html" class="footer__link">Prevention</a>
+                        <a href="news.html" class="footer__link">News</a>
+                    </div>
+                    <div class="col-lg-3">
+                        <p>Source from <a
+                                href="https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683"
+                                target="_blank">api.covid19api.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./js/functions.js"></script>
+    <script>
+        (function (w, d, u) {
+            var s = d.createElement('script');
+            s.async = true;
+            s.src = u + '?' + (Date.now() / 60000 | 0);
+            var h = d.getElementsByTagName('script')[0];
+            h.parentNode.insertBefore(s, h);
+        })(window, document, 'https://cdn.bitrix24.com/b17929189/crm/site_button/loader_2_plnihy.js');
+    </script>
+    <script>
+        fetch(
+                "https://covid-19-news.p.rapidapi.com/v1/covid?q=covid&lang=en&media=True", {
+                    method: "GET",
+
+                    headers: {
+                        "x-rapidapi-key": "2d2dea647fmsh577c57bb54abd69p13249djsn06827c6f1fe8",
+
+                        "x-rapidapi-host": "covid-19-news.p.rapidapi.com",
+                    },
+                }
+            )
+            .then((response) => response.json())
+
+            .then((data) => {
+                var news = document.querySelector(".news-page");
+
+                for (let i = 0; i < 32; i++) {
+                    var newsData = `<div class="col-md-3">
+                        <div class="card">
+
+                            <img src="${data.articles[i].media}" class="card-img-top" alt="news_image">
+
+                            <div class="card-body">
+                                <h5 class="card-title">${data.articles[i].title}</h5>
+
+                                <p class="card-text">${data.articles[i].summary}</p>
+
+                                <a href="${data.articles[i].link}">
+
+                                    <button class="btn btn-primary">Read More</button>
+
+                                </a>
+                            </div>
+
+                            
+                        </div>
+                    </div>`;
+
+                    news.innerHTML += newsData;
+                }
+
+            })
+            .catch((err) => {
+                let news = document.querySelector(".news-page");
+                console.error(err);
+                news.innerHTML += "<h1 class='text-center'>API Request error😪 <br> Please, Try again later!</h1>";
+            });
+
+        function loading() {
+            let body = document.querySelector("body");
+
+            body.classList.remove("loading");
+        }
+    </script>
+</body>
+
+</html>
