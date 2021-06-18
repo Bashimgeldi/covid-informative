@@ -267,9 +267,9 @@ main {
     padding: 40px 30px 60px;
     min-height: 450px;
     overflow: hidden;
-    cursor: pointer;
     border: none;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    align-items: center;
 }
 #contagion .card:hover {
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
@@ -566,7 +566,8 @@ main {
         width: 800px;
     }
     .prevention__desc {
-        padding-left: 70px;
+        padding-left: 86px;
+        text-align: justify;
     }
     .prevention__image {
         width: 450px;
